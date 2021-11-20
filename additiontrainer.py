@@ -7,17 +7,34 @@
 import random
 score = 0
 
-num1 = random.randint(0,99)
-num2 = random.randint(0,99)
 
-print(str(num1), "+", str(num2), "= ?")
-answer = int(input("Answer = "))
+def addition(): # I used function so redundancy of long line of codes will be avoided.
+    num1 = random.randint(0,99)
+    num2 = random.randint(0,99)
+
+    print(str(num1), "+", str(num2), "= ?")
+    answer = int(input("Answer = "))
 
 
-if(num1 + num2 == answer):
-    print("Correct!")
-    score = score + 1
-else: 
-    print("Wrong!")
+    if(num1 + num2 == answer):
+        print("Correct!")
+        score = 1
+    else: 
+        print("Wrong!")
+        score = 0
+    return score
 
-print("Total score is " + str(score) + "/10")
+
+score = score + addition()
+score = score + addition()
+score = score + addition()
+score = score + addition()
+score = score + addition()
+score = score + addition()
+score = score + addition()
+score = score + addition()
+score = score + addition()
+score = score + addition()
+
+print("Your total score is " + str(score) + "/10")
+
